@@ -1,7 +1,7 @@
-import ParserUtils.Parser
+
 from ParserUtils.Parser import toLowerCase,getWords
 
-# Stores Parsed tweet information in a class
+# Stores Parsed tweet information in a class , as well as provides object hook function for parsing json file
 
 class TweetInfo:
     text = list()
@@ -26,10 +26,6 @@ class TweetInfo:
         if len(self.user_mentions) > 0:
             TweetInfo.unique_screen_names.add(self.screen_name)
         TweetInfo.unique_screen_names.update(self.user_mentions)
-
-    def __str__(self, *args, **kwargs):
-        desc_str = self.screen_name + " Tweeted " +  ':'.join(self.text) +" mentioning " + ':'.join(self.user_mentions) + " from " + self.location + " at " + self.created_at
-        return desc_str
 
     def __str__(self, *args, **kwargs):
         desc_str = self.screen_name + " Tweeted " +  ':'.join(self.text) +" mentioning " + ':'.join(self.user_mentions) + " from " + self.location + " at " + self.created_at

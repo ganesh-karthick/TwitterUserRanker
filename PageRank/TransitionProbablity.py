@@ -3,14 +3,13 @@ import numpy
 __author__ = 'gk'
 
 from PageRank.Iterator import MatrixInfo
-from scipy.sparse import coo_matrix
 
-
+# Implements matrix builder helper classes to build link, Teleport matrix used in Page rank calculation
 # P = (1- α) * link matrix + α * teleport matrix , input α
 
-from PageRank import TweetInfo,Iterator
+
 from scipy import sparse
-from numpy import array
+
 
 
 class LinkMatrix:

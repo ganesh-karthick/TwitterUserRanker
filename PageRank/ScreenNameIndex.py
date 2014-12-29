@@ -1,6 +1,6 @@
 __author__ = 'gk'
 
-# Look up Table for user to ID and ID to user
+# Implements look up Table for user to ID and ID to user, as the end Result class for storing user rank and score
 
 class ScreenNameIndex:
     nameToIdMap = dict()
